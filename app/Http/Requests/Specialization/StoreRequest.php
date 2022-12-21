@@ -25,11 +25,12 @@ class StoreRequest extends FormRequest
     {
         return [
             'direction' => 'required|string',
+            'title' => 'required|string',
             'fullTime' => 'string',
             'correspondence' => 'string',
             'entranceExam' => 'string',
             'description' => 'string',
-            'budget' => 'float',
+            'budget' => 'integer',
         ];
     }
 }

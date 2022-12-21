@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('specialization', function (Blueprint $table) {
+        Schema::create('specialties', function (Blueprint $table) {
             $table->id();
-
+            $table->string('title');
             $table->string('direction')->default('empty');
             $table->string('fullTime')->nullable();
             $table->string('correspondence')->nullable();
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('specialization');
+        Schema::dropIfExists('specialties');
     }
 };

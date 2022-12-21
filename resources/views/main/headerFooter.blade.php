@@ -60,13 +60,22 @@
                                     <a class="nav-link" href="services.html">Колледж</a>
                                 </li>
                                 <li class="nav-item @@contact-active">
-                                    <a class="nav-link" href="contact.html">Общежитие</a>
+                                    <a class="nav-link" href="{{ route('hostel.index') }}">Общежитие</a>
+                                </li>
+                                <li class="nav-item @@about-active">
+                                    <a class="nav-link" href="{{ route('professionaltrainingcourses.index') }}">Курсы профподготовки</a>
+                                </li>
+                                <li class="nav-item @@about-active">
+                                    <a class="nav-link" href="{{ route('requisite.index') }}">Банковские реквизиты</a>
                                 </li>
                                 <li class="nav-item @@about-active">
                                     <a class="nav-link" href="about.html">Расписание</a>
                                 </li>
+                                <li class="nav-item @@about-active">
+                                    <a class="nav-link" href="{{ route('post.index') }}">Новости</a>
+                                </li>
                                 <li class="nav-item @@contact-active">
-                                    <a class="nav-link" href="contact.html">Контакты</a>
+                                    <a class="nav-link" href="{{ route('contact.index') }}">Контакты</a>
                                 </li>
                                 <li class="nav-item @@contact-active">
                                     <a class="nav-link" href="contact.html">Войти</a>

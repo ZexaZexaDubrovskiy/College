@@ -25,11 +25,9 @@ class UpdateRequest extends FormRequest
     {
         return [
             'title' => 'required|string',
-            'idObject' => 'tinyint',
-            'idGroup' => 'tinyint',
-            'idOffice' => 'tinyint',
+            'text' => 'string',
+            'image' => 'string',
             'description' => 'string',
-            'date' => 'date',
         ];
     }
 }

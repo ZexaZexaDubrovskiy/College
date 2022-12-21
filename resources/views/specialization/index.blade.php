@@ -13,159 +13,24 @@
                 </div>
 
                 <div class="features-grids">
-
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 featured-service">
-                            <div class="feature-16-gd">
-                                <div class="feature-16-gd-info">
-                                    <h4 class="mt-4 mb-2"><a href="#url">Информационные системы и программирование</a>
-                                    </h4>
-                                    <a href="#url" class="btn btn-outline-primary theme-button mt-4">Learn more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 featured-service">
-                            <div class="feature-16-gd">
-                                <div class="feature-16-gd-info">
-                                    <h4 class="mt-4 mb-2"><a href="#url">Сетевое и системное администрирование</a></h4>
-
-                                    <a href="#url" class="btn btn-outline-primary theme-button mt-4">Learn more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 featured-service">
-                            <div class="feature-16-gd">
-                                <div class="feature-16-gd-info">
-                                    <h4 class="mt-4 mb-2"><a href="#url">Графический дизайнер</a></h4>
-
-                                    <a href="#url" class="btn btn-outline-primary theme-button mt-4">Learn more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="features-grids">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6 featured-service">
-                                    <div class="feature-16-gd">
-                                        <div class="feature-16-gd-info">
-                                            <h4 class="mt-4 mb-2"><a href="#url">Печатное дело</a></h4>
-                                            <a href="#url" class="btn btn-outline-primary theme-button mt-4">Learn
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 featured-service">
-                                    <div class="feature-16-gd">
-                                        <div class="feature-16-gd-info">
-                                            <h4 class="mt-4 mb-2"><a href="#url">Монтаж, техническое обслуживание и
-                                                    ремонт промышленного оборудования</a></h4>
-
-                                            <a href="#url" class="btn btn-outline-primary theme-button mt-4">Learn
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 featured-service">
-                                    <div class="feature-16-gd">
-                                        <div class="feature-16-gd-info">
-                                            <h4 class="mt-4 mb-2"><a href="#url">Издательское дело</a></h4>
-
-                                            <a href="#url" class="btn btn-outline-primary theme-button mt-4">Learn
-                                                more</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="features-grids">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-6 featured-service">
-                                            <div class="feature-16-gd">
-                                                <div class="feature-16-gd-info">
-                                                    <h4 class="mt-4 mb-2"><a href="#url">Реклама</a></h4>
-                                                    <a href="#url" class="btn btn-outline-primary theme-button mt-4">Learn
-                                                        more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 featured-service">
-                                            <div class="feature-16-gd">
-                                                <div class="feature-16-gd-info">
-                                                    <h4 class="mt-4 mb-2"><a href="#url">Дизайн (по отраслям)</a></h4>
-
-                                                    <a href="#url" class="btn btn-outline-primary theme-button mt-4">Learn
-                                                        more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 featured-service">
-                                            <div class="feature-16-gd">
-                                                <div class="feature-16-gd-info">
-                                                    <h4 class="mt-4 mb-2"><a href="#url">Экономика и бухгалтерский учет
-                                                            (по отраслям)</a></h4>
-
-                                                    <a href="#url" class="btn btn-outline-primary theme-button mt-4">Learn
-                                                        more</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="features-grids">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-6 featured-service">
-                                                    <div class="feature-16-gd">
-                                                        <div class="feature-16-gd-info">
-                                                            <h4 class="mt-4 mb-2"><a href="#url">Коммерция (по
-                                                                    отраслям)</a></h4>
-                                                            <a href="#url"
-                                                               class="btn btn-outline-primary theme-button mt-4">Learn
-                                                                more</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 featured-service">
-                                                    <div class="feature-16-gd">
-                                                        <div class="feature-16-gd-info">
-                                                            <h4 class="mt-4 mb-2"><a href="#url">Туризм</a></h4>
-
-                                                            <a href="#url"
-                                                               class="btn btn-outline-primary theme-button mt-4">Learn
-                                                                more</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-6 featured-service">
-                                                    <div class="feature-16-gd">
-                                                        <div class="feature-16-gd-info">
-                                                            <h4 class="mt-4 mb-2"><a href="#url">Товароведение и
-                                                                    экспертиза качества потребительских товаров</a></h4>
-
-                                                            <a href="#url"
-                                                               class="btn btn-outline-primary theme-button mt-4">Learn
-                                                                more</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="features-grids">
-                                                    <div class="row">
-                                                        <div class="col-lg-4 col-md-6 featured-service">
-                                                            <div class="feature-16-gd">
-                                                                <div class="feature-16-gd-info">
-                                                                    <h4 class="mt-4 mb-2"><a href="#url">Фотограф</a>
-                                                                    </h4>
-                                                                    <a href="#url"
-                                                                       class="btn btn-outline-primary theme-button mt-4">Learn
-                                                                        more</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                        @foreach($specialties as $specialization)
+                            <div class="col-lg-4 col-md-6 featured-service">
+                                <div class="feature-16-gd">
+                                    <div class="feature-16-gd-info">
+                                        <h4 class="mt-4 mb-2"><a
+                                                href="{{ route('specialization.show', $specialization->id) }}">{{ $specialization->title }} </a>
+                                        </h4>
+                                        <a href="{{ route('specialization.show', $specialization->id) }}"
+                                           class="btn btn-outline-primary theme-button mt-4">Подробнее</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
-
                 </div>
+
+                <a href="{{ route('specialization.create') }}" class="btn btn-primary mt-5">добавить специальность(администратор)</a>
             </div>
         </div>
     </section>

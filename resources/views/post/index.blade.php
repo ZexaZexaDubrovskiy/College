@@ -1,125 +1,33 @@
 @extends('main.headerFooter')
 @section('content')
-    <section class="w3l-index5" id="about">
-        <div class="new-block py-5">
+    <!--  //спецральности section -->
+    <section class="w3l-services2">
+        <div class="feature-16-main py-5">
             <div class="container py-lg-3">
+
                 <div class="header-section text-center">
-                    <h3>Новости</h3>
+                    <h3>Новости колледжа</h3>
                 </div>
 
-                <div class="list-single-view mt-5">
+                <div class="features-grids">
                     <div class="row">
-                        <div class="col-md-12 mt-3">
-                            <div class="grids5-info">
-                                <a href="#url" class="d-block zoom"><img src="images/p1.jpg" alt="" class="img-fluid news-image" /></a>
-                                <div class="blog-info">
-                                    <h4>Идеи колледжа</h4>
-                                    <p class="blog-text">
-                                        В период с 15 октября по 15 декабря 2022 года в ГПОУ ЯО Рыбинском полиграфическом
-                                        колледже проходил IV международный конкурс «АРТ - ИДЕИ В ПОЛИГРАФИИ».</p>
+                        @foreach($posts as $post)
+                            <div class="col-lg-4 col-md-6 featured-service">
+                                <div class="feature-16-gd">
+                                    <div class="feature-16-gd-info">
+                                        <h4 class="mt-4 mb-2"><a
+                                                href="{{ route('post.show', $post->id) }}">{{ $post->title }} </a>
+                                        </h4>
+                                        <a href="{{ route('post.show', $post->id) }}"
+                                           class="btn btn-outline-primary theme-button mt-4">Подробнее</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
 
-                <div class="list-single-view mt-5">
-                    <div class="row">
-                        <div class="col-md-12 mt-3">
-                            <div class="grids5-info">
-                                <a href="#url" class="d-block zoom"><img src="images/p1.jpg" alt="" class="img-fluid news-image" /></a>
-                                <div class="blog-info">
-                                    <h4>Идеи колледжа</h4>
-                                    <p class="blog-text">
-                                        В период с 15 октября по 15 декабря 2022 года в ГПОУ ЯО Рыбинском полиграфическом
-                                        колледже проходил IV международный конкурс «АРТ - ИДЕИ В ПОЛИГРАФИИ».</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="list-single-view mt-5">
-                    <div class="row">
-                        <div class="col-md-12 mt-3">
-                            <div class="grids5-info">
-                                <a href="#url" class="d-block zoom"><img src="images/p1.jpg" alt="" class="img-fluid news-image" /></a>
-                                <div class="blog-info">
-                                    <h4>Идеи колледжа</h4>
-                                    <p class="blog-text">
-                                        В период с 15 октября по 15 декабря 2022 года в ГПОУ ЯО Рыбинском полиграфическом
-                                        колледже проходил IV международный конкурс «АРТ - ИДЕИ В ПОЛИГРАФИИ».</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="list-single-view mt-5">
-                    <div class="row">
-                        <div class="col-md-12 mt-3">
-                            <div class="grids5-info">
-                                <a href="#url" class="d-block zoom"><img src="images/p1.jpg" alt="" class="img-fluid news-image" /></a>
-                                <div class="blog-info">
-                                    <h4>Идеи колледжа</h4>
-                                    <p class="blog-text">
-                                        В период с 15 октября по 15 декабря 2022 года в ГПОУ ЯО Рыбинском полиграфическом
-                                        колледже проходил IV международный конкурс «АРТ - ИДЕИ В ПОЛИГРАФИИ».</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="list-single-view mt-5">
-                    <div class="row">
-                        <div class="col-md-12 mt-3">
-                            <div class="grids5-info">
-                                <a href="#url" class="d-block zoom"><img src="images/p1.jpg" alt="" class="img-fluid news-image" /></a>
-                                <div class="blog-info">
-                                    <h4>Идеи колледжа</h4>
-                                    <p class="blog-text">
-                                        В период с 15 октября по 15 декабря 2022 года в ГПОУ ЯО Рыбинском полиграфическом
-                                        колледже проходил IV международный конкурс «АРТ - ИДЕИ В ПОЛИГРАФИИ».</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="list-single-view mt-5">
-                    <div class="row">
-                        <div class="col-md-12 mt-3">
-                            <div class="grids5-info">
-                                <a href="#url" class="d-block zoom"><img src="images/p1.jpg" alt="" class="img-fluid news-image" /></a>
-                                <div class="blog-info">
-                                    <h4>Идеи колледжа</h4>
-                                    <p class="blog-text">
-                                        В период с 15 октября по 15 декабря 2022 года в ГПОУ ЯО Рыбинском полиграфическом
-                                        колледже проходил IV международный конкурс «АРТ - ИДЕИ В ПОЛИГРАФИИ».</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="list-single-view mt-5">
-                    <div class="row">
-                        <div class="col-md-12 mt-3">
-                            <div class="grids5-info">
-                                <a href="#url" class="d-block zoom"><img src="images/p1.jpg" alt="" class="img-fluid news-image" /></a>
-                                <div class="blog-info">
-                                    <h4>Идеи колледжа</h4>
-                                    <p class="blog-text">
-                                        В период с 15 октября по 15 декабря 2022 года в ГПОУ ЯО Рыбинском полиграфическом
-                                        колледже проходил IV международный конкурс «АРТ - ИДЕИ В ПОЛИГРАФИИ».</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
+                <a href="{{ route('post.create') }}" class="btn btn-primary mt-5">добавить новость(администратор)</a>
             </div>
         </div>
     </section>
