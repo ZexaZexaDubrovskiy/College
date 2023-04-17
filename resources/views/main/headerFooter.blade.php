@@ -46,43 +46,51 @@
                         <span class="navbar-toggler-icon fa icon-close fa-times"></span>
                     </button>
 
-                    <div calss="fixedElement ">
-                        <div class="collapse navbar-collapse fixedElement " id="navbarSupportedContent">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item @@services-active">
-                                    <a class="nav-link" href="index.html">Поступающему <span
-                                            class="sr-only">(current)</span></a>
-                                </li>
+
+                    <!-- gjvtyzk-->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <ul>
                                 <li class="nav-item @@services-active">
                                     <a class="nav-link" href="{{ route('specialization.index') }}">Специальности</a>
-                                </li>
-                                <li class="nav-item @@services-active">
-                                    <a class="nav-link" href="services.html">Колледж</a>
                                 </li>
                                 <li class="nav-item @@contact-active">
                                     <a class="nav-link" href="{{ route('hostel.index') }}">Общежитие</a>
                                 </li>
+                            </ul>
+
+                            <ul>
                                 <li class="nav-item @@about-active">
-                                    <a class="nav-link" href="{{ route('professionaltrainingcourses.index') }}">Курсы профподготовки</a>
+                                    <a class="nav-link" href="{{ route('professionaltrainingcourses.index') }}">Курсы
+                                        профподготовки</a>
                                 </li>
                                 <li class="nav-item @@about-active">
                                     <a class="nav-link" href="{{ route('requisite.index') }}">Банковские реквизиты</a>
                                 </li>
-                                <li class="nav-item @@about-active">
-                                    <a class="nav-link" href="about.html">Расписание</a>
-                                </li>
+
+                            </ul>
+
+                            <ul>
                                 <li class="nav-item @@about-active">
                                     <a class="nav-link" href="{{ route('post.index') }}">Новости</a>
                                 </li>
                                 <li class="nav-item @@contact-active">
                                     <a class="nav-link" href="{{ route('contact.index') }}">Контакты</a>
                                 </li>
-                                <li class="nav-item @@contact-active">
-                                    <a class="nav-link" href="contact.html">Войти</a>
-                                </li>
-
                             </ul>
-                        </div>
+
+                            <ul>
+                                <li><a class="nav-link" href="index.html">Поступающему <span
+                                            class="sr-only">(current)</span></a></li>
+                                <li><a class="nav-link" href="services.html">Колледж</a></li>
+                            </ul>
+
+
+                            <ul>
+                                <li><a class="nav-link" href="about.html">Расписание</a></li>
+                                <li><a class="nav-link" href="contact.html">Войти</a></li>
+                            </ul>
+                        </ul>
                     </div>
                 </nav>
             </div>
