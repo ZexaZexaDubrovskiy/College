@@ -3,15 +3,16 @@
 namespace App\Http\Controllers\Post;
 
 use App\Http\Controllers\Controller;
+use App\Models\Photo;
 use App\Models\Post;
+use App\Models\PostPhoto;
+use Illuminate\Support\Facades\DB;
 
-class DeleteController extends Controller
+class ShowController extends Controller
 {
     public function __invoke($id)
     {
 
-//        dd($id);
-//        die();
-//        return redirect()->route('post.show', $id);
     }
+
 }

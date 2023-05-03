@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('education');
             $table->string('experience');
             $table->string('description');
+            $table->string('avatar')->nullable();
 
             $table->timestamps();
         });

@@ -23,11 +23,12 @@ class StoreRequest extends FormRequest
      */
     public function rules()
     {
+        $photos = array();
         return [
             'title' => 'required|string',
-            'text' => 'text',
-            'image' => 'text',
-            'description' => 'string',
+            'text' => 'required|string',
+            'description' => 'required|string',
+            'photos' => 'array|required',
         ];
     }
 }

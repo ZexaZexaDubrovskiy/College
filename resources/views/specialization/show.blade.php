@@ -21,14 +21,14 @@
                             </div>
                             <div class="column">
                                 <h2>На базе 9 классов | На базе 11 классов</h2>
-                                <p>3 г. 10 м. | 2 г. 10 м.</p>
+                                <p>{{ $specialization->fullTime }}</p>
                             </div>
                             <div class="column">
                                 <h2>заочная форма обучения</h2>
                             </div>
                             <div class="column">
                                 <h2>На базе 9 классов | На базе 11 классов</h2>
-                                <p>- | -</p>
+                                <p>{{ $specialization->correspondence }}</p>
                             </div>
                             <div class="column">
                                 <h2>Вступительные экзамены</h2>

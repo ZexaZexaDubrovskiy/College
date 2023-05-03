@@ -19,9 +19,9 @@ Route::group(['namespace' => 'App\\Http\\Controllers\\Hostel'], function (){
 });
 
 //главная страница
-Route::group(['namespace' => 'App\\Http\\Controllers\\Main'], function (){
-    Route::get('/', 'IndexController')->name('main.index');
-});
+//Route::group(['namespace' => 'App\\Http\\Controllers\\Main'], function (){
+//    Route::get('/', 'IndexController')->name('main.index');
+//});
 
 //банковские реквизиты
 Route::group(['namespace' => 'App\\Http\\Controllers\\Requisite'], function (){
@@ -53,6 +53,11 @@ Route::group(['namespace' => 'App\\Http\\Controllers\\Post'], function (){
     Route::patch('/posts/{post}', 'UpdateController')->name('post.update');
     Route::delete('/posts/{post}', 'DestroyController')->name('post.delete');
     Route::get('/posts/{post}', 'ShowController')->name('post.show');
+});
+
+//посты(удалить картинки)
+Route::group(['namespace' => 'App\\Http\\Controllers\\PostPhoto'], function (){
+    Route::delete('/postPhotos/{id}', 'DestroyController')->name('postPhoto.delete');
 });
 
 //Контакты

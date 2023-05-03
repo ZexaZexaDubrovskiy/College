@@ -3,6 +3,8 @@
 namespace App\Http\Requests\Contact;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules\File;
 
 class StoreRequest extends FormRequest
 {
@@ -21,11 +23,20 @@ class StoreRequest extends FormRequest
      *
      * @return array<string, mixed>
      */
+    //'direction' => 'required|string',
     public function rules()
     {
         return [
-            'direction' => 'required|string',
-            'title' => 'required|string',
+
+            'FIO' => 'required|string',
+            'post' => 'required|string',
+            'phone' => 'required|string',
+            'email' => 'required|string',
+            'workTime' => 'required|string',
+            'education' => 'required|string',
+            'experience' => 'required|string',
+            'description' => 'required|string',
+            'avatar' => "required | mimes:jpeg,jpg,png | max:1000",
 
 
         ];

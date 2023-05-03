@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Post;
+namespace App\Http\Controllers\PostPhoto;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Post\UpdateRequest;
@@ -10,10 +10,6 @@ class UpdateController extends BaseController
 {
     public function __invoke($id, UpdateRequest $request)
     {
-        $post = Post::findOrFail($id);
-        $data = $request->validated();
 
-        $this->service->update($post, $data);
-        return redirect()->route('post.show', $post->id);
     }
 }

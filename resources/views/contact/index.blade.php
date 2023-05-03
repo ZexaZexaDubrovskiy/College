@@ -17,10 +17,14 @@
                                     @foreach($contacts as $contact)
                                     <tr>
                                         <td>
-                                            <p>{{ $contact->FIO }}</p>
+                                                <img style="width: 300px; height: 300px;"
+                                                     src="data:image/jpeg;base64, {{base64_encode($contact->avatar)}}"/>
+
                                         </td>
                                         <td>
-                                            <p> <b><u>{{$contact->FIO}}</u></b> <br>
+                                            <h4><u><a
+                                                    href="{{ route('contact.show', $contact->id) }}">{{ $contact->FIO }} </a> </u>
+                                            <p> <br>
                                                 <b>{{$contact->post}}</b> <br>
                                                 Номер телефона: {{$contact->phone}} <br>
                                                 Почта: {{$contact->email}} <br>
@@ -30,6 +34,7 @@
                                                 Дополнительно о том какая крутая: {{$contact->description}} <br>
                                             </p>
                                         </td>
+
                                     </tr>
                                     @endforeach
                                 </table>

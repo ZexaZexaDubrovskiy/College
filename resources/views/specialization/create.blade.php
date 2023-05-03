@@ -20,7 +20,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">На базе очного обучения</label>
+                <label for="exampleFormControlTextarea1" class="form-label">На базе очного обучения через | (пример: 3г 10м | 2г 10 м)</label>
                 <input value="{{old('fullTime')}}" class="form-control" id="exampleFormControlTextarea1" type="text" name="fullTime" placeholder="На базе очного обучения">
                 @error('fullTime')
                 <p class="text-danger">{{$message}}</p>
@@ -28,7 +28,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">На базе заочного обучения</label>
+                <label for="exampleFormControlTextarea1" class="form-label">На базе заочного обучения через | (пример: 3г 10м | 2г 10 м)</label>
                 <input value="{{old('correspondence')}}" class="form-control" id="exampleFormControlTextarea1" type="text" name="correspondence" placeholder="На базе заочного обучения">
                 @error('correspondence')
                 <p class="text-danger">{{$message}}</p>

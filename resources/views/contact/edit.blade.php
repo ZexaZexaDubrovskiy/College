@@ -1,31 +1,80 @@
 @extends('main.headerFooter')
 @section('content')
     <div>
-        <form action="{{ route('specialization.update', $post->id) }}" method="post">
+        <form action="{{ route('contact.update', $contact->id) }}" method="post" enctype="multipart/form-data" >
             @csrf
             @method('patch')
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Название специальности</label>
-                <input value="{{ $specialization->title }}" class="form-control" id="exampleFormControlTextarea1" type="text" name="title" placeholder="Название">
-                @error('title')
-                <p class="text-danger">{{$message}}</p>
+                <label for="exampleFormControlTextarea1" class="form-label">FIO</label>
+                <input value="{{ $contact->FIO }}" class="form-control" id="exampleFormControlTextarea1" type="text" name="FIO" placeholder="FIO">
+                <!-- что за error? -->
+                @error('FIO')
+                <p class="text-danger">{{ $message}}</p>
                 @enderror
             </div>
-
-
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Дополнительно</label>
-                <input value="{{ $specialization->description }}" class="form-control" id="exampleFormControlTextarea1" type="text" name="description" placeholder="Дополнительно">
+                <label for="exampleFormControlTextarea2" class="form-label">post</label>
+                <input value="{{ $contact->post }}" class="form-control" id="exampleFormControlTextarea2" type="text" name="post" placeholder="post">
+                <!-- что за error? -->
+                @error('post')
+                <p class="text-danger">{{ $message}}</p>
+                @enderror
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea3" class="form-label">phone</label>
+                <input value="{{ $contact->phone }}" class="form-control" id="exampleFormControlTextarea3" type="text" name="phone" placeholder="phone">
+                <!-- что за error? -->
+                @error('phone')
+                <p class="text-danger">{{ $message}}</p>
+                @enderror
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea4" class="form-label">email</label>
+                <input value="{{ $contact->email }}" class="form-control" id="exampleFormControlTextarea4" type="text" name="email" placeholder="email">
+                <!-- что за error? -->
+                @error('email')
+                <p class="text-danger">{{ $message}}</p>
+                @enderror
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea5" class="form-label">workTime</label>
+                <input value="{{ $contact->workTime }}" class="form-control" id="exampleFormControlTextarea5" type="text" name="workTime" placeholder="workTime">
+                <!-- что за error? -->
+                @error('workTime')
+                <p class="text-danger">{{ $message}}</p>
+                @enderror
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea6" class="form-label">education</label>
+                <input value="{{ $contact->education }}" class="form-control" id="exampleFormControlTextarea6" type="text" name="education" placeholder="education">
+                <!-- что за error? -->
+                @error('education')
+                <p class="text-danger">{{ $message}}</p>
+                @enderror
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea7" class="form-label">experience</label>
+                <input value="{{ $contact->experience }}" class="form-control" id="exampleFormControlTextarea7" type="text" name="experience" placeholder="experience">
+                <!-- что за error? -->
+                @error('experience')
+                <p class="text-danger">{{ $message}}</p>
+                @enderror
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea8" class="form-label">description</label>
+                <input value="{{ $contact->description }}" class="form-control" id="exampleFormControlTextarea8" type="text" name="description" placeholder="description">
+                <!-- что за error? -->
                 @error('description')
-                <p class="text-danger">{{$message}}</p>
+                <p class="text-danger">{{ $message}}</p>
                 @enderror
             </div>
 
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Бюджет</label>
-                <input value="{{ $specialization->budget }}" class="form-control" id="exampleFormControlTextarea1" type="text" name="budget" placeholder="Бюджет(вещественный тип)">
-                @error('budget')
-                <p class="text-danger">{{$message}}</p>
+                <label for="exampleFormControlTextarea9" class="form-label">avatar</label>
+                <input  class="form-control" id="exampleFormControlTextarea9" type="file" name="avatar" placeholder="avatar">
+                <!-- что за error? -->
+                @error('avatar')
+                <p class="text-danger">{{ $__bag}}</p>
                 @enderror
             </div>
 
