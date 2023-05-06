@@ -4141,28 +4141,48 @@ a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none; }
 
-.btn-primary {
-  color: #212529;
-  background-color: #ff8f07;
-  border-color: #ff8f07; }
-  .btn-primary:hover {
-    color: #fff;
-    background-color: #e07b00;
-    border-color: #d37400; }
-  .btn-primary:focus, .btn-primary.focus {
-    color: #fff;
+
+
+/* btn-primary */
+/*color: #212529;*/
+/*background-color: #ff8f07;*/
+/*border-color: #ff8f07;*/
+/*
+btn hover
+color: #fff;
     background-color: #e07b00;
     border-color: #d37400;
-    box-shadow: 0 0 0 0.2rem rgba(222, 127, 12, 0.5); }
-  .btn-primary.disabled, .btn-primary:disabled {
+
+
+.btn-primary.disabled, .btn-primary:disabled {
     color: #212529;
     background-color: #ff8f07;
     border-color: #ff8f07; }
+ */
+
+
+.btn-primary {
+    color: white;
+    background-color: #09458d;
+    border-color: #09458d; }
+  .btn-primary:hover {
+    color: black;
+    background-color: white;
+    border-color: white; }
+  .btn-primary:focus, .btn-primary.focus {
+      color: white;
+      background-color: #09458d;
+      border-color: #09458d;
+    box-shadow: 0 0 0 0.2rem rgba(222, 127, 12, 0.5); }
+  .btn-primary.disabled, .btn-primary:disabled {
+      color: black;
+      background-color: white;
+      border-color: white; }
   .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle {
-    color: #fff;
-    background-color: #d37400;
-    border-color: #c66d00; }
+      color: white;
+      background-color: #09458d;
+      border-color: #09458d; }
     .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
     .show > .btn-primary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(222, 127, 12, 0.5); }
@@ -4349,23 +4369,47 @@ fieldset:disabled a.btn {
     .show > .btn-dark.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5); }
 
-.btn-outline-primary {
-  color: #ff8f07;
+
+
+    /*
+
+
+
+    color: #ff8f07;
   border-color: #ff8f07; }
   .btn-outline-primary:hover {
     color: #212529;
     background-color: #ff8f07;
-    border-color: #ff8f07; }
-  .btn-outline-primary:focus, .btn-outline-primary.focus {
-    box-shadow: 0 0 0 0.2rem rgba(255, 143, 7, 0.5); }
-  .btn-outline-primary.disabled, .btn-outline-primary:disabled {
+    border-color: #ff8f07;
+
+
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
     color: #ff8f07;
     background-color: transparent; }
-  .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
-  .show > .btn-outline-primary.dropdown-toggle {
+
+.show > .btn-outline-primary.dropdown-toggle {
     color: #212529;
     background-color: #ff8f07;
     border-color: #ff8f07; }
+
+     */
+.btn-outline-primary {
+  color: black;
+    border-color: #09458d; }
+  .btn-outline-primary:hover {
+    color: white;
+    background-color: #09458d;
+    border-color: #09458d; }
+  .btn-outline-primary:focus, .btn-outline-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 143, 7, 0.5); }
+  .btn-outline-primary.disabled, .btn-outline-primary:disabled {
+    color: white;
+    background-color: transparent; }
+  .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-primary.dropdown-toggle {
+      color: white;
+      background-color: #09458d;
+      border-color: #09458d; }
     .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-primary.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(255, 143, 7, 0.5); }
@@ -9555,8 +9599,12 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+
+/*
+primary: #ff8f07;
+ */
 :root {
-  --primary: #ff8f07;
+  --primary: #09458d;
   --secondary: #ba3833;
   --title-color: #090909;
   --text-color: #5a5a5a;

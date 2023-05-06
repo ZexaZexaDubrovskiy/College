@@ -1,6 +1,10 @@
 @extends('main.headerFooter')
 @section('content')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <div>
+        <section class="w3l-services2">
+            <div class="container py-lg-3">
+                <div class="mb-3">
         <form action="{{ route('contact.update', $contact->id) }}" method="post" enctype="multipart/form-data" >
             @csrf
             @method('patch')
@@ -82,5 +86,8 @@
                 <button type="submit" class="btn btn-primary mb-3">Обновить</button>
             </div>
         </form>
+                </div>
+            </div>
+        </section>
     </div>
 @endsection

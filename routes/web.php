@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\TimeTable\EditController;
 use Illuminate\Support\Facades\Route;
 
 //главная страница
@@ -70,4 +71,16 @@ Route::group(['namespace' => 'App\\Http\\Controllers\\Contact'], function (){
     Route::patch('/contacts/{contact}', 'UpdateController')->name('contact.update');
     Route::delete('/contacts/{contact}', 'DestroyController')->name('contact.delete');
     Route::get('/contacts/{contact}', 'ShowController')->name('contact.show');
+});
+
+//Расписание
+Route::group(['namespace' => 'App\\Http\\Controllers\\TimeTable'], function (){
+    Route::get('/timetables', 'IndexController')->name('timetable.index');
+    Route::get('/timetables/create', 'CreateController')->name('timetable.create');
+    Route::post('/timetables', 'StoreController')->name('timetable.store');
+    Route::get('/timetables/{timetable}', 'ShowController')->name('timetable.show');
+    Route::get('/timetables/{timetable}/edit/{currentGroupId}', 'EditController')->name('timetable.edit');
+    Route::patch('/timetables/{timetable}', 'UpdateController')->name('timetable.update');
+    Route::delete('/timetables/{timetable}', 'DestroyController')->name('timetable.delete');
+    Route::get('/timetables/{timetable}', 'ShowController')->name('timetable.show');
 });

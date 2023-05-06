@@ -2337,7 +2337,7 @@
 				} else {
 					tnLink = $( '<div/>', {
 						"class": "owl-video-tn",
-						"style": 'opacity:1;background-images:url(' + path + ')'
+						"style": 'opacity:1;background-image:url(' + path + ')'
 					});
 				}
 				target.after(tnLink);

@@ -22,7 +22,7 @@
 
                                         </td>
                                         <td>
-                                            <h4><u><a
+                                            <h4><u><a style="color: #09458d"
                                                     href="{{ route('contact.show', $contact->id) }}">{{ $contact->FIO }} </a> </u>
                                             <p> <br>
                                                 <b>{{$contact->post}}</b> <br>

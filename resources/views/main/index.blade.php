@@ -1,9 +1,9 @@
 @extends('main.headerFooter')
 @section('content')
 
-<!--  Main banner section -->
+<!--  Main banner section #09458d -->
 <section class="w3l-main-banner">
-    <div class="companies20-content">
+    <div class="companies20-content" style="background: #c4d5e4">
         <div class="companies-wrapper">
             <div class="container">
                 <div class="banner-item">
@@ -36,7 +36,7 @@
                     <br><b>Телефон:</b> 8 (4852) 40-18-95
                     <br><b>Факс:</b> 8 (4852) 72-83-81
                     <br><b>E-mail:</b> dobr@region.adm.yar.ru</p>
-                <a href="#signup.html" class="btn btn-primary theme-button">Подать заявление</a>
+{{--                <a href="#signup.html" class="btn btn-primary theme-button">Подать заявление</a>  #c4d5e4 --}}
             </div>
         </div>
     </div>
@@ -120,8 +120,7 @@
                                         <h2>Вопросы связанные с общежитием</h2>
                                         <p>Общежитие вмещает 120 человек. Стоимость для льготников составляет 102,00 руб. в день.
                                         Стоимость месяца проживания 750 рублей. Студенты в статусе опекаемых или сирот проживают бесплатно.
-                                        Кол-во проживающих в комнате максимум 4 человека.
-                                            Расстояние от общежития до колледжа 100 метров.
+                                        Кол-во проживающих в комнате максимум 4 человека. Расстояние от общежития до колледжа 100 метров.
                                         </p>
                                     </li>
                                     <li>
@@ -156,7 +155,7 @@
                                         <input type="checkbox" checked>
                                         <i></i>
                                         <h2>Документы необходимые для заселения в общежитие</h2>
-                                        <p>Паспорт, снилс и что-то ещё</p>
+                                        <p>Паспорт, снилс.</p>
                                     </li>
                                     <li>
                                         <input type="checkbox" checked>

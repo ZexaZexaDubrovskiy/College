@@ -14,7 +14,21 @@
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
 
     <!-- Template CSS какая то чушь, но она работает. Я вообще бекэнд разработчик что вы хотели? Интересно кто будет читать это?))) -->
-    @vite(['resources/sass/app.scss', 'resources/css/style-starter.css'])
+    @vite(['resources/sass/app.scss',
+            'resources/css/style-starter.css',
+            //'resources/js/app.js',
+            //'resources/js/bootstrap.js',
+            //'resources/js/bootstrapMy.min.js',
+            //'resources/js/jquery.countup.js',
+            //'resources/js/jquery.waypoints.min.js',
+            //'resources/js/jquery-3.3.1.min.js',
+           // 'resources/js/owl.carousel.js', 'resources/images',
+            //'resources/fonts/FontAwesome.otf', 'resources/fonts/fontawesome-webfont.eot',
+            //'resources/fonts/fontawesome-webfont.svg',
+            // 'resources/fonts/fontawesome-webfont.ttf',
+            //'resources/fonts/fontawesome-webfont.woff', 'resources/fonts/fontawesome-webfont.woff2'
+            ])
+
 </head>
 <body>
 
@@ -32,7 +46,7 @@
         <div class="hero-header-11-content">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light py-md-2 py-0 px-0">
-                    <a class="navbar-brand" href="{{ route('main.index') }}"><img src="images/logo-icon.png"
+                    <a class="navbar-brand" href="{{ route('main.index') }}"><img src="{{ asset('//images logo-icon.png')}}"
                                                                                   alt=""/>РПК</a>
                     <!-- if logo is image enable this
                 <a class="navbar-brand" href="#index.html">
@@ -80,15 +94,8 @@
                             </ul>
 
                             <ul>
-                                <li><a class="nav-link" href="index.html">Поступающему <span
-                                            class="sr-only">(current)</span></a></li>
-                                <li><a class="nav-link" href="services.html">Колледж</a></li>
-                            </ul>
-
-
-                            <ul>
-                                <li><a class="nav-link" href="about.html">Расписание</a></li>
-                                <li><a class="nav-link" href="contact.html">Войти</a></li>
+                                <li><a class="nav-link" href="{{ route('timetable.index') }}">Расписание</a></li>
+                                <li><a class="nav-link" href="">Войти</a></li>
                             </ul>
                         </ul>
                     </div>
@@ -110,58 +117,63 @@
 
 
 <!-- footer -->
-<footer class="w3l-footer-29-main" id="footer">
-    <div class="footer-29 py-5">
+<footer class="w3l-footer-29-main" id="footer" >
+    <div class="footer-29 py-5" style="background: #c4d5e4">
         <div class="container pb-lg-3">
             <div class="row footer-top-29">
-                <div class="col-lg-4 col-md-6 footer-list-29 footer-1 mt-md-4">
-                    <a class="footer-logo mb-md-3 mb-2" href="#url"><img src="assets/images/logo-icon.png"
-                                                                         alt=""/>РПК</a>
-                    <p>Это современное учебное заведение нового типа, осуществляющее
+                <div class="col-lg-4 col-md-6 footer-list-29 footer-1 mt-md-4" >
+                    <a class="footer-logo mb-md-3 mb-2" href="#url" style="color: black"><img src="../../images/logo-icon.png"
+                                                                         alt="" />РПК</a>
+                    <p style="color: black">Это современное учебное заведение нового типа, осуществляющее
                         подготовку специалистов со средним профессиональным образованием по всем направлениям
                         полиграфического профиля.</p>
                 </div>
-                <div class="col-lg-2 col-md-6 footer-list-29 footer-2 mt-5">
-                    <h6 class="footer-title-29">Поступающему</h6>
+                <div class="col-lg-2 col-md-6 footer-list-29 footer-2 mt-5 ml-4 ">
+                    <h6 class="footer-title-29" style="color: black">Поступающему и родителям</h6>
                     <ul>
-                        <li><a href="#gallery.html">Популярные вопросы</a></li>
-                        <li><a href="#gallery.html">Общежитие</a></li>
-                        <li><a href="#gallery.html">Специальности</a></li>
+                        <li><a href="#" style="color: black">Популярные вопросы</a></li>
+                        <li><a href="#" style="color: black">Общежитие</a></li>
+                        <li><a href="#" style="color: black">Специальности</a></li>
+                        <li><a href="#" style="color: black">Курсы профподготовки</a></li>
+                        <li><a href="#" style="color: black">Контакты</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-6 footer-list-29 footer-3 mt-5">
+                <div class="col-lg-4 col-md-6 footer-list-29 footer-3 mt-5 ml-4">
                     <div class="properties">
-                        <h6 class="footer-title-29">Студенту</h6>
-                        <a class="d-grid twitter-feed" href="#blog-single.html">
-                            <img src="assets/images/g1.jpg" class="img-fluid rounded" alt="">
-                            <p>Расписание занятий</p>
+                        <h6 class="footer-title-29" style="color: black">Студенту</h6>
+                        <a class="d-grid twitter-feed" href="#" style="color: black">
+                            <img src="../../images/g1.jpg" class="img-fluid rounded" alt="">
+                            <p style="color: black">Расписание занятий</p>
                         </a>
-                        <a class="d-grid twitter-feed" href="#blog-single.html">
-                            <img src="assets/images/g2.jpg" class="img-fluid rounded" alt="">
-                            <p>Новости</p>
+                        <a class="d-grid twitter-feed" href="#">
+                            <img src="../../images/g2.jpg" class="img-fluid rounded" alt="" >
+                            <p style="color: black">Новости</p>
                         </a>
-                        <a class="d-grid twitter-feed" href="#blog-single.html">
-                            <img src="assets/images/g3.jpg" class="img-fluid rounded" alt="">
-                            <p>Контакты</p>
+                        <a class="d-grid twitter-feed" href="#">
+                            <img src="../../images/g3.jpg" class="img-fluid rounded" alt="">
+                            <p style="color: black">Контакты</p>
+                        </a>
+                        <a class="d-grid twitter-feed" href="#">
+                            <img src="../../images/g3.jpg" class="img-fluid rounded" alt="">
+                            <p style="color: black">Банковские реквизиты</p>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 footer-list-29 footer-4 mt-5">
-                    <h6 class="footer-title-29">Родителям</h6>
-                    <ul>
-                        <li><a href="index.html">Приемная комиссия</a></li>
-                        <li><a href="about.html">что то ещё</a></li>
-                    </ul>
-                </div>
+{{--                <div class="col-lg-2 col-md-6 footer-list-29 footer-4 mt-5">--}}
+{{--                    <h6 class="footer-title-29" style="color: black">Родителям</h6>--}}
+{{--                    <ul>--}}
+{{--                        <li><a href="" style="color: black">Приемная комиссия</a></li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>
-    <div id="footers14-block" class="py-3">
+    <div id="footers14-block" class="py-3 mt-1" style="background: #c4d5e4">
         <div class="container">
             <div class="footers14-bottom text-center">
                 <div class="copyright mt-1">
-                    <p>&copy; 2022 ГПОУ ЯО Рыбинский полиграфический колледж </p>
-                    <p>152900, Ярославская обл., г. Рыбинск, ул. Расплетина, 47, тел./факс: (4855) 26-35-48
+                    <p style="color: black">&copy; 2022 ГПОУ ЯО Рыбинский полиграфический колледж </p>
+                    <p style="color: black">152900, Ярославская обл., г. Рыбинск, ул. Расплетина, 47, тел./факс: (4855) 26-35-48
                         &ensp;&ensp;&ensp; e-mail: rpcollege.rybinsk@yarregion.ru</p>
                 </div>
             </div>
@@ -198,14 +210,14 @@
 <!-- Footer -->
 
 <!-- jQuery and Bootstrap JS -->
-<script src="assets/js/jquery-3.3.1.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 
 <!-- Template JavaScript -->
 
 <!-- stats number counter-->
-<script src="assets/js/jquery.waypoints.min.js"></script>
-<script src="assets/js/jquery.countup.js"></script>
+<script src="../../jquery.waypoints.min.js"></script>
+<script src="../../js/jquery.countup.js"></script>
 <script>
     $('.counter').countUp();
 </script>
@@ -213,7 +225,7 @@
 
 
 <!-- testimonials owlcarousel -->
-<script src="assets/js/owl.carousel.js"></script>
+<script src="../../js/owl.carousel.js"></script>
 
 <!-- script for owlcarousel -->
 <script>
