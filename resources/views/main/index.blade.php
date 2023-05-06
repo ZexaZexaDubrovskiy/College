@@ -15,7 +15,7 @@
                             <p class="my-4 mb-sm-5">Это современное учебное заведение нового типа,
                                 осуществляющее подготовку специалистов со средним профессиональным образованием по всем направлениям полиграфического профиля.
                             </p><br>
-                            <a href="#signup.html" class="btn btn-primary theme-button mr-3">Поступающему</a>
+                            <a href="#faqq" class="btn btn-primary theme-button mr-3">Поступающему</a>
                             <a href="#courses.html" class="btn btn-outline-primary theme-button">Войти</a>
                         </div>
                     </div>
@@ -82,8 +82,8 @@
                         <div class="feature-16-gd">
                             <div class="feature-16-gd-info">
                                 <h4 class="mt-4 mb-2">Информация для родителей</h4>
-
-                                <a href="services.html" class="btn btn-primary theme-button mt-4">Смотреть</a>
+                                <?php $whom = 1?>
+                                <a href="{{ route('post.indexParent', $whom) }}" class="btn btn-primary theme-button mt-4">Смотреть</a>
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,8 @@
                         <div class="feature-16-gd">
                             <div class="feature-16-gd-info">
                                 <h4 class="mt-4 mb-2">Информация для студентов</h4>
-                                <a href="services.html" class="btn btn-primary theme-button mt-4">Смотреть</a>
+                                <?php $whom = 2?>
+                                <a href="{{ route('post.indexParent', $whom) }}" class="btn btn-primary theme-button mt-4">Смотреть</a>
                             </div>
                         </div>
                     </div>
@@ -102,7 +103,7 @@
         </div>
     </div>
 </section>
-<div class="w3l-faq-block py-5">
+<div class="w3l-faq-block py-5" id="faqq">
     <div class="container py-lg-5">
         <div class="header-section mb-4">
             <h3>FAQ</h3>
@@ -169,7 +170,7 @@
                     </div>
                     <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
                         <section class="w3l-faq" id="faq">
-                            <div class="faq-page">
+                            <div class="faq-page" >
                                 <ul>
                                     <li>
                                         <input type="checkbox" checked>

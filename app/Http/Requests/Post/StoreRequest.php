@@ -29,6 +29,7 @@ class StoreRequest extends FormRequest
             'text' => 'required|string',
             'description' => 'required|string',
             'photos' => 'array|required',
+            'type' => 'required|int',
         ];
     }
 }

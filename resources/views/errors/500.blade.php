@@ -6,7 +6,7 @@
     <style>
         html { height: 100%; }
         body {
-            background: rgba(254, 146, 64, 0.05);;
+            background: white;
 
             background-size: cover; /* Масштабирует картинку сохраняя пропорции */
         }
@@ -43,9 +43,9 @@
 </head>
 <body>
 <div class="over"></div>
-<div class="v404">500</div>
-<div class="notfound">страница не найдена<br>
-    <a href="{{ route('main.index') }}"> перейти на главную страницу..</a>
+<div class="v404" style="color: #007bff">500</div>
+<div class="notfound" style="color: #007bff">страница не найдена<br>
+    <a href="{{ route('main.index') }}" style="color: #007bff"> перейти на главную страницу..</a>
 </div>
 </body>
 </html>

@@ -47,6 +47,7 @@ Route::group(['namespace' => 'App\\Http\\Controllers\\Specialization'], function
 //посты(новости)
 Route::group(['namespace' => 'App\\Http\\Controllers\\Post'], function (){
     Route::get('/posts', 'IndexController')->name('post.index');
+    Route::get('/postsParent/{whom}', 'IndexParentController')->name('post.indexParent');
     Route::get('/posts/create', 'CreateController')->name('post.create');
     Route::post('/posts', 'StoreController')->name('post.store');
     Route::get('/posts/{post}', 'ShowController')->name('post.show');

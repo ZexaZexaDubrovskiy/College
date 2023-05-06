@@ -46,6 +46,30 @@
                             @enderror
                         </div>
 
+                        <div class="mb-3">
+                            <label for="typeIdIndex" class="form-label">Тип</label>
+                            <select id="typeIdIndex" class="form-control" name="type">
+                                <option
+                                    @if($post->type == 0)
+                                        selected="selected"
+                                    @endif
+                                    value="0">Для всех</option>
+                                <option
+                                    @if($post->type == 1)
+                                        selected="selected"
+                                    @endif
+                                    value="1">Для родителей</option>
+                                <option
+                                    @if($post->type == 2)
+                                        selected="selected"
+                                    @endif
+                                    value="2">Для поступающих</option>
+                            </select>
+                            @error('type')
+                            <p class="text-danger">{{ $message}}</p>
+                            @enderror
+                        </div>
+
 
                         <div class="col-auto">
                             <button type="submit" class="btn btn-primary mb-3">Обновить</button>

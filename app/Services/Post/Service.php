@@ -44,11 +44,11 @@ class Service {
     public function update($post, $data){
         //обновление поста
         $dataFromPost = $data;
-        if (count($data) == 4)
+        if (count($data) == 5)
             unset($dataFromPost["photos"]);
         $post->update($dataFromPost);
 
-        if (count($data) == 4) {
+        if (count($data) == 5) {
             //добавление связей в таблицу и фото
             foreach ($data['photos'] as $file) {
                 //функционал для добавления фото в таблицу photos

@@ -42,6 +42,18 @@
                             @enderror
                         </div>
 
+                        <div class="mb-3">
+                            <label for="typeIdIndex" class="form-label">Тип</label>
+                            <select id="typeIdIndex" class="form-control" name="type">
+                                <option value="0">Для всех</option>
+                                <option value="1">Для родителей</option>
+                                <option value="2">Для поступающих</option>
+                            </select>
+                            @error('type')
+                            <p class="text-danger">{{ $message}}</p>
+                            @enderror
+                        </div>
+
                         <div class="col-auto">
                             <button type="submit" class="btn btn-primary mb-3">Создать</button>
                         </div>

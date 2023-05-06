@@ -12,6 +12,7 @@
                 <div class="features-grids">
                     <div class="row">
                         @foreach($posts as $post)
+                            @if($post->type == 0)
                             <div class="col-lg-4 col-md-6 featured-service">
                                 <div class="feature-16-gd">
                                     <div class="feature-16-gd-info">
@@ -23,6 +24,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @endif
                         @endforeach
                     </div>
                 </div>

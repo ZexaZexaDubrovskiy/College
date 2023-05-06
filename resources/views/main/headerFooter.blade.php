@@ -94,7 +94,8 @@
                             </ul>
 
                             <ul>
-                                <li><a class="nav-link" href="{{ route('timetable.index') }}">Расписание</a></li>
+                                <?php $group = \Illuminate\Support\Facades\DB::table('groups')->first() ?>
+                                <li><a class="nav-link" href="{{ route('timetable.show', $group->id) }}">Расписание</a></li>
                                 <li><a class="nav-link" href="">Войти</a></li>
                             </ul>
                         </ul>
@@ -131,11 +132,10 @@
                 <div class="col-lg-2 col-md-6 footer-list-29 footer-2 mt-5 ml-4 ">
                     <h6 class="footer-title-29" style="color: black">Поступающему и родителям</h6>
                     <ul>
-                        <li><a href="#" style="color: black">Популярные вопросы</a></li>
-                        <li><a href="#" style="color: black">Общежитие</a></li>
-                        <li><a href="#" style="color: black">Специальности</a></li>
-                        <li><a href="#" style="color: black">Курсы профподготовки</a></li>
-                        <li><a href="#" style="color: black">Контакты</a></li>
+                        <li><a href="{{ route('hostel.index') }}" style="color: black">Общежитие</a></li>
+                        <li><a href="{{ route('specialization.index') }}" style="color: black">Специальности</a></li>
+                        <li><a href="{{ route('professionaltrainingcourses.index') }}" style="color: black">Курсы профподготовки</a></li>
+                        <li><a href="{{ route('contact.index') }}" style="color: black">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 footer-list-29 footer-3 mt-5 ml-4">
@@ -143,19 +143,20 @@
                         <h6 class="footer-title-29" style="color: black">Студенту</h6>
                         <a class="d-grid twitter-feed" href="#" style="color: black">
                             <img src="../../images/g1.jpg" class="img-fluid rounded" alt="">
-                            <p style="color: black">Расписание занятий</p>
+                            <?php $group = \Illuminate\Support\Facades\DB::table('groups')->first() ?>
+                            <a href="{{ route('timetable.show', $group->id) }}" style="color: black">Расписание занятий</a>
                         </a>
                         <a class="d-grid twitter-feed" href="#">
                             <img src="../../images/g2.jpg" class="img-fluid rounded" alt="" >
-                            <p style="color: black">Новости</p>
+                            <a href="{{ route('post.index', 0) }}" style="color: black">Новости</a>
                         </a>
                         <a class="d-grid twitter-feed" href="#">
                             <img src="../../images/g3.jpg" class="img-fluid rounded" alt="">
-                            <p style="color: black">Контакты</p>
+                            <a href="{{ route('contact.index') }}" style="color: black">Контакты</a>
                         </a>
                         <a class="d-grid twitter-feed" href="#">
                             <img src="../../images/g3.jpg" class="img-fluid rounded" alt="">
-                            <p style="color: black">Банковские реквизиты</p>
+                            <a href="{{ route('requisite.index') }}" style="color: black">Банковские реквизиты</a>
                         </a>
                     </div>
                 </div>

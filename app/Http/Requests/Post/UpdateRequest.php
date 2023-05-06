@@ -28,6 +28,7 @@ class UpdateRequest extends FormRequest
             'title' => 'required|string',
             'text' => 'required|string',
             'description' => 'required|string',
+            'type' => 'required|int',
             'photos' => array(),
         ];
     }
