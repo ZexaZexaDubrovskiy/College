@@ -55,7 +55,7 @@
             <p class="mt-3 mb-5">{{ $specialization->description}}.</p>
         </div>
 
-
+        @can('view', auth()->user())
         <div><a href="{{ route('specialization.edit', $specialization->id) }}" class="btn btn-warning">Изменить(администратор)</a></div>
         <div class="ml-5"><a href="{{ route('specialization.index') }}" class="btn btn-secondary">Назад</a></div>
 
@@ -66,6 +66,7 @@
                 <input type="submit" class="btn btn-danger" value="Удалить(администратор)">
             </form>
         </div>
+            @endcan
 
     </section>
 @endsection

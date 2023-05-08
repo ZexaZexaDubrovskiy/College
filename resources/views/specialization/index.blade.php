@@ -29,8 +29,9 @@
                         @endforeach
                     </div>
                 </div>
-
+                @can('view', auth()->user())
                 <a href="{{ route('specialization.create') }}" class="btn btn-primary mt-5">добавить специальность(администратор)</a>
+                    @endcan
             </div>
         </div>
     </section>

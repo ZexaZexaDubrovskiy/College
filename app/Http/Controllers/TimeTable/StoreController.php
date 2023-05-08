@@ -13,6 +13,8 @@ class StoreController extends BaseController
     {
         $data = $request->validated();
         $this->service->store($data);
-        return redirect()->route('timetable.index');
+
+        $group = \Illuminate\Support\Facades\DB::table('groups')->first();
+        return redirect()->route('timetable.show', $group->id);
     }
 }

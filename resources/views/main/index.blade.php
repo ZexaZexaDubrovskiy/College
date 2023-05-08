@@ -16,7 +16,7 @@
                                 осуществляющее подготовку специалистов со средним профессиональным образованием по всем направлениям полиграфического профиля.
                             </p><br>
                             <a href="#faqq" class="btn btn-primary theme-button mr-3">Поступающему</a>
-                            <a href="#courses.html" class="btn btn-outline-primary theme-button">Войти</a>
+                            <a href="{{ route('login') }}" class="btn btn-outline-primary theme-button">Войти</a>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                     <div class="col-md-6 mt-md-0 mt-4">
                         <div class="feature-16-gd">
                             <div class="feature-16-gd-info">
-                                <h4 class="mt-4 mb-2">Информация для студентов</h4>
+                                <h4 class="mt-4 mb-2">Информация для поступающих</h4>
                                 <?php $whom = 2?>
                                 <a href="{{ route('post.indexParent', $whom) }}" class="btn btn-primary theme-button mt-4">Смотреть</a>
                             </div>

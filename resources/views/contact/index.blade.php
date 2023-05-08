@@ -42,8 +42,9 @@
                         </table>
                     </div>
                 </div>
-
+                @can('view', auth()->user())
                 <a href="{{ route('contact.create') }}" class="btn btn-primary mt-5">добавить типочка(администратор)</a>
+                    @endcan
             </div>
         </div>
     </section>

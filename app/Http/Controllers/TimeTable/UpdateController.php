@@ -12,7 +12,6 @@ class UpdateController extends BaseController
 {
     public function __invoke($id, UpdateRequest $request)
     {
-
         $timetable = TimeTable::findOrFail($id);
         $data = $request->validated();
         $this->service->update($timetable, $data);

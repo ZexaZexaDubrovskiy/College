@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
         $subjects = Subject::factory(50)->create();
         $teachers = Teacher::factory(10)->create();
 
-        $users = User::factory(10)->create();
+        $users = User::factory(3)->create();
 
         foreach($subjects as $subject){
             $groupIds = $groups->random(1)->pluck('id');

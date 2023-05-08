@@ -33,8 +33,9 @@
                         @endforeach
                     </div>
                 </div>
-
+                @can('view', auth()->user())
                 <a href="{{ route('post.create') }}" class="btn btn-primary mt-5">добавить новость(администратор)</a>
+                    @endcan
             </div>
         </div>
     </section>

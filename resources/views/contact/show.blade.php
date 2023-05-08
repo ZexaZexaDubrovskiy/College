@@ -30,7 +30,7 @@
 
                     </tr>
                 </div>
-
+                @can('view', auth()->user())
                 <div>
                     <form action="{{ route('contact.delete', $contact->id) }}" method="post">
                         @csrf
@@ -40,6 +40,7 @@
                 </div>
                 <div><a href="{{ route('contact.edit', $contact->id) }}" class="btn btn-warning">Изменить(администратор)</a></div>
                 <div><a href="{{ route('contact.index') }}" class="btn btn-secondary">Назад</a></div>
+                    @endcan
             </div>
         </div>
     </section>

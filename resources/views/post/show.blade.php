@@ -25,7 +25,7 @@
                     </tr>
                     </table>
                 </div>
-
+                @can('view', auth()->user())
                 <div>
                     <form action="{{ route('post.delete', $post->id) }}" method="post">
                         @csrf
@@ -35,6 +35,7 @@
                 </div>
                 <div><a href="{{ route('post.edit', $post->id) }}" class="btn btn-warning">Изменить(администратор)</a></div>
                 <div><a href="{{ route('post.index') }}" class="btn btn-secondary">Back</a></div>
+                    @endcan
             </div>
         </div>
     </section>

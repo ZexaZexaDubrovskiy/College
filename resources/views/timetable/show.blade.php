@@ -36,59 +36,74 @@
                                 <th scope="col" style="width: 25%;">Преподаватель</th>
                                 <th scope="col" style="width: 25%;">Каб.</th>
                                 <th scope="col" style="width: 25%; ">Примечание</th>
-                                <th scope="col" style="width: 25%; ">изменить</th>
+                                @if(auth()->user() != null && (auth()->user()->role == 'admin' || auth()->user()->role == 'accountant'))
+                                    <th scope="col" style="width: 25%; ">изменить</th>
+                                @endif
                             </tr>
                             </thead>
 
-                        <?php
+                                <?php
 
-                        for ($j = 1; $j <= 50; $j++) {
-                            for ($i = 0; $i < 50; $i++) {
-                                if ($i + 1 < count($timetables) &&
-                                    \App\Models\DateTimeTable::where('id', '=', $timetables[$i]['date_time_table_id'])->first()['startDate']
-                                    >
-                                    \App\Models\DateTimeTable::where('id', '=', $timetables[$i + 1]['date_time_table_id'])->first()['startDate']) {
-                                    $buf = $timetables[$i + 1];
-                                    $timetables[$i + 1] = $timetables[$i];
-                                    $timetables[$i] = $buf;
+                                for ($j = 1; $j <= 50; $j++) {
+                                    for ($i = 0; $i < 50; $i++) {
+                                        if ($i + 1 < count($timetables) &&
+                                            \App\Models\DateTimeTable::where('id', '=', $timetables[$i]['date_time_table_id'])->first()['startDate']
+                                            >
+                                            \App\Models\DateTimeTable::where('id', '=', $timetables[$i + 1]['date_time_table_id'])->first()['startDate']) {
+                                            $buf = $timetables[$i + 1];
+                                            $timetables[$i + 1] = $timetables[$i];
+                                            $timetables[$i] = $buf;
+                                        }
+                                    }
                                 }
-                            }
-                        }
 
 
-                        $days = array( 1 => "Понедельник" , "Вторник" , "Среда" , "Четверг" , "Пятница" , "Суббота" , "Воскресенье" );
-                        $currentData = null;
-                        foreach ($timetables as $timetable) {
+                                $days = array(1 => "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье");
+                                $currentData = null;
+                                ?>
+                            @foreach ($timetables as $timetable)
 
-                            if (\App\Models\Group::where('id', '=', $timetable->group_id)->first()['name'] == $currentGroup['name']) {
-                                if ($currentData != \App\Models\DateTimeTable::where('id', '=', $timetable->date_time_table_id)->first()['startDate']) {
-                                    $date = new DateTimeImmutable(\App\Models\DateTimeTable::where('id', '=', $timetable->date_time_table_id)->first()['startDate']);
-                                    echo '
-                                    <tr >
-                                    <th >
-                                         ' . $date->format('d.m.Y') .' - ' . $days[$date->format('N')] . '
-                                    </th>
-                                </tr>';
-                                    $currentData = \App\Models\DateTimeTable::where('id', '=', $timetable->date_time_table_id)->first()['startDate'];
-                                }
-                                $dateTime = new DateTimeImmutable(\App\Models\Lesson::where('id', '=', $timetable->lesson_id)->first()['startTime']);
-                                $myData = array('timetableId' => $timetable->id, 'currentGroupId' => $currentGroup['id']);
-                                echo
-                                    '<tr style="background: #c4d5e4;">
-                                <td scope="row"> ' . $dateTime->format('h:i') . '</td>
-                                <td>' . \App\Models\Subject::where('id', '=', $timetable->subject_id)->first()['name'] . '</td>
-                                <td>' . \App\Models\Teacher::where('id', '=', $timetable->teacher_id)->first()['name'] . '</td>
-                                <td>' . \App\Models\Room::where('id', '=', $timetable->room_id)->first()['name'] . '</td>
-                                <td>' . $timetable->description . '</td>
-                                <td> <a style="color: #09458d" href="'. route('timetable.edit', [$timetable->id, $currentGroup['id']]) .'">изменить</a> </td>
+                                @if (\App\Models\Group::where('id', '=', $timetable->group_id)->first()['name'] == $currentGroup['name'])
+                                    @if ($currentData != \App\Models\DateTimeTable::where('id', '=', $timetable->date_time_table_id)->first()['startDate'])
+                                        @php
+                                            $date = new DateTimeImmutable(\App\Models\DateTimeTable::where('id', '=', $timetable->date_time_table_id)->first()['startDate']);
+                                        @endphp
+                                        <tr>
+                                            <th>
+                                                @php
+                                                    echo $date->format('d.m.Y') . ' - ' . $days[$date->format('N')] ;
+                                                @endphp
+                                            </th>
+                                        </tr>
+                                    @endif
+                                    @php
+                                        $currentData = \App\Models\DateTimeTable::where('id', '=', $timetable->date_time_table_id)->first()['startDate'];
+                                    $dateTime = new DateTimeImmutable(\App\Models\Lesson::where('id', '=', $timetable->lesson_id)->first()['startTime']);
+                                    $myData = array('timetableId' => $timetable->id, 'currentGroupId' => $currentGroup['id']);
+                                    @endphp
 
-                            </tr>
-                            ';
-                            }
-                        }
-                        ?>
+                                    <tr style="background: #c4d5e4;">
+                                        <td scope="row">  {{$dateTime->format('h:i')}}</td>
+                                        <td> {{\App\Models\Subject::where('id', '=', $timetable->subject_id)->first()['name']}} </td>
+                                        <td> {{\App\Models\Teacher::where('id', '=', $timetable->teacher_id)->first()['name']}} </td>
+                                        <td> {{\App\Models\Room::where('id', '=', $timetable->room_id)->first()['name']}} </td>
+                                        <td> {{$timetable->description}} </td>
+
+                                        @if(auth()->user() != null && (auth()->user()->role == 'admin' || auth()->user()->role == 'accountant'))
+{{--                                        @can('view', auth()->user())--}}
+                                            <td><a style="color: #09458d"
+                                                   href="{{route('timetable.edit', [$timetable->id, $currentGroup['id']]) }}">изменить</a>
+                                            </td>
+                                        @endif
+                                    </tr>
+                        @endif
+
+                        @endforeach
                     </table>
-                    <a href="{{ route('timetable.create') }}" class="btn btn-primary mt-5">добавить урок(администратор)</a>
+                    @can('view', auth()->user())
+                        <a href="{{ route('timetable.create') }}" class="btn btn-primary mt-5">добавить
+                            урок(администратор)</a>
+                    @endcan
                 </div>
             </div>
         </section>

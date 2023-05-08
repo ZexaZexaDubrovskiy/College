@@ -53,10 +53,11 @@
                             <p class="text-danger">{{ $message}}</p>
                             @enderror
                         </div>
-
+                        @can('view', auth()->user())
                         <div class="col-auto">
                             <button type="submit" class="btn btn-primary mb-3">Создать</button>
                         </div>
+                            @endcan
                     </form>
                 </div>
             </div>
