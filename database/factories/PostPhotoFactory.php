@@ -2,12 +2,14 @@
 
 namespace Database\Factories;
 
+use App\Models\Photo;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\DateTimeTable>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\PostPhoto>
  */
-class DateTimeTableFactory extends Factory
+class PostPhotoFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -16,8 +18,13 @@ class DateTimeTableFactory extends Factory
      */
     public function definition()
     {
+
+        $i = random_int(1, 20);
+        $j = random_int(1, 20);
+
         return [
-           // 'startDate' => $this->faker->,
+            'post_id' => $i,
+            'photo_id' => $j,
         ];
     }
 }

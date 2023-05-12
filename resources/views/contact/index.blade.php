@@ -31,7 +31,7 @@
                                                 Рабочее время: {{$contact->workTime}} <br>
                                                 Образование: {{$contact->education}} <br>
                                                 Стаж: {{$contact->experience}} <br>
-                                                Дополнительно о том какая крутая: {{$contact->description}} <br>
+                                                Дополнительно: {{$contact->description}} <br>
                                             </p>
                                         </td>
 
@@ -40,11 +40,12 @@
                                 </table>
                             </div>
                         </table>
+                        @can('view', auth()->user())
+                            <a href="{{ route('contact.create') }}" class="btn btn-primary mt-5">Добавить сотрудника</a>
+                        @endcan
                     </div>
                 </div>
-                @can('view', auth()->user())
-                <a href="{{ route('contact.create') }}" class="btn btn-primary mt-5">добавить типочка(администратор)</a>
-                    @endcan
+
             </div>
         </div>
     </section>

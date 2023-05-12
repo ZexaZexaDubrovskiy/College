@@ -24,10 +24,16 @@ class AdminPanelMiddleware
 
         $takeUri = substr($request->path(), 0, 10);
 
+
         if (auth()->user()->role == 'accountant'){
             if ($takeUri != 'timetables' && (auth()->user()->role != 'admin')){
+                if ($takeUri == 'hostel/1'){
+                    return $next($request);
+                }
                 return redirect()->route('main.index');
             }
+        }else if (auth()->user()->role != 'admin'){
+            return redirect()->route('main.index');
         }
 
 
@@ -35,7 +41,6 @@ class AdminPanelMiddleware
 //            dd('!= admin');
 //           return redirect()->route('main.index');
 //        }
-
 
         return $next($request);
     }

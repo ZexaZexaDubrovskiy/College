@@ -16,7 +16,9 @@
                                 осуществляющее подготовку специалистов со средним профессиональным образованием по всем направлениям полиграфического профиля.
                             </p><br>
                             <a href="#faqq" class="btn btn-primary theme-button mr-3">Поступающему</a>
-                            <a href="{{ route('login') }}" class="btn btn-outline-primary theme-button">Войти</a>
+                            @if(auth()->user() == null)
+                                <a href="{{ route('login') }}" class="btn btn-outline-primary theme-button">Войти</a>
+                            @endif
                         </div>
                     </div>
                 </div>

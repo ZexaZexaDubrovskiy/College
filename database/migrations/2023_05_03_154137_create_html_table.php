@@ -13,18 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('photos', function (Blueprint $table) {
+        Schema::create('html_table', function (Blueprint $table) {
             $table->id();
-            $table->binary('url');
+            $table->string('namePage');
+            $table->longText('htmlData')->nullable();
+
             $table->timestamps();
         });
-        //создать самому таблицу
-        /*
-         *
-         * роли переим
-         * и доделать таблицу
-         * расписаине
-         */
     }
 
     /**
@@ -34,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('photos');
+        Schema::dropIfExists('html_table');
     }
 };

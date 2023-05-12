@@ -19,6 +19,9 @@ Route::group(['namespace' => 'App\\Http\\Controllers\\ProfessionalTrainingCourse
 Route::group(['namespace' => 'App\\Http\\Controllers\\Hostel'], function () {
     Route::get('/hostel', 'IndexController')->name('hostel.index');
 });
+Route::group(['namespace' => 'App\\Http\\Controllers\\Hostel', 'middleware' => 'admin'], function () {
+    Route::patch('/hostel/{id}', 'UpdateController')->name('hostel.update');
+});
 //банковские реквизиты
 Route::group(['namespace' => 'App\\Http\\Controllers\\Requisite'], function () {
     Route::get('/requisite', 'IndexController')->name('requisite.index');
@@ -91,14 +94,29 @@ Route::group(['namespace' => 'App\\Http\\Controllers\\PostPhoto', 'middleware' =
 });
 
 //Контакты
-Route::group(['namespace' => 'App\\Http\\Controllers\\Contact'], function () {
-    Route::get('/contacts', 'IndexController')->name('contact.index');
+//Route::group(['namespace' => 'App\\Http\\Controllers\\Contact'], function () {
+//    Route::get('/contacts', 'IndexController')->name('contact.index');
+//    Route::get('/contacts/create', 'CreateController')->name('contact.create');
+//    Route::post('/contacts', 'StoreController')->name('contact.store');
+//    Route::get('/contacts/{contact}', 'ShowController')->name('contact.show');
+//    Route::get('/contacts/{contact}/edit', 'EditController')->name('contact.edit');
+//    Route::patch('/contacts/{contact}', 'UpdateController')->name('contact.update');
+//    Route::delete('/contacts/{contact}', 'DestroyController')->name('contact.delete');
+//    Route::get('/contacts/{contact}', 'ShowController')->name('contact.show');
+//});
+
+//Контакты
+Route::group(['namespace' => 'App\\Http\\Controllers\\Contact', 'middleware' => 'admin'], function () {
     Route::get('/contacts/create', 'CreateController')->name('contact.create');
     Route::post('/contacts', 'StoreController')->name('contact.store');
     Route::get('/contacts/{contact}', 'ShowController')->name('contact.show');
     Route::get('/contacts/{contact}/edit', 'EditController')->name('contact.edit');
     Route::patch('/contacts/{contact}', 'UpdateController')->name('contact.update');
     Route::delete('/contacts/{contact}', 'DestroyController')->name('contact.delete');
+});
+
+Route::group(['namespace' => 'App\\Http\\Controllers\\Contact'], function () {
+    Route::get('/contacts', 'IndexController')->name('contact.index');
     Route::get('/contacts/{contact}', 'ShowController')->name('contact.show');
 });
 

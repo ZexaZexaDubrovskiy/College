@@ -44,19 +44,19 @@
 
                                 <?php
 
-                                for ($j = 1; $j <= 50; $j++) {
-                                    for ($i = 0; $i < 50; $i++) {
-                                        if ($i + 1 < count($timetables) &&
-                                            \App\Models\DateTimeTable::where('id', '=', $timetables[$i]['date_time_table_id'])->first()['startDate']
-                                            >
-                                            \App\Models\DateTimeTable::where('id', '=', $timetables[$i + 1]['date_time_table_id'])->first()['startDate']) {
-                                            $buf = $timetables[$i + 1];
-                                            $timetables[$i + 1] = $timetables[$i];
-                                            $timetables[$i] = $buf;
-                                        }
-                                    }
-                                }
-
+//                                for ($j = 1; $j <= 50; $j++) {
+//                                    for ($i = 0; $i < 50; $i++) {
+//                                        if ($i + 1 < count($timetables) &&
+//                                            \App\Models\DateTimeTable::where('id', '=', $timetables[$i]['date_time_table_id'])->first()['startDate']
+//                                            >
+//                                            \App\Models\DateTimeTable::where('id', '=', $timetables[$i + 1]['date_time_table_id'])->first()['startDate']) {
+//                                            $buf = $timetables[$i + 1];
+//                                            $timetables[$i + 1] = $timetables[$i];
+//                                            $timetables[$i] = $buf;
+//                                        }
+//                                    }
+//                                }
+ //                           $timetables = DB::table('time_tables')->order_by('date_time_table_id', 'asc')->get();
 
                                 $days = array(1 => "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье");
                                 $currentData = null;
@@ -83,7 +83,7 @@
                                     @endphp
 
                                     <tr style="background: #c4d5e4;">
-                                        <td scope="row">  {{$dateTime->format('h:i')}}</td>
+                                        <td scope="row">  {{$dateTime->format('H:i')}}</td>
                                         <td> {{\App\Models\Subject::where('id', '=', $timetable->subject_id)->first()['name']}} </td>
                                         <td> {{\App\Models\Teacher::where('id', '=', $timetable->teacher_id)->first()['name']}} </td>
                                         <td> {{\App\Models\Room::where('id', '=', $timetable->room_id)->first()['name']}} </td>

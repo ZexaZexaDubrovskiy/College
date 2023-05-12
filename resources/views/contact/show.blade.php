@@ -24,7 +24,7 @@
                                     Рабочее время: {{$contact->workTime}} <br>
                                     Образование: {{$contact->education}} <br>
                                     Стаж: {{$contact->experience}} <br>
-                                    Дополнительно о том какая крутая: {{$contact->description}} <br>
+                                    Дополнительно: {{$contact->description}} <br>
                                 </p>
                         </td>
 

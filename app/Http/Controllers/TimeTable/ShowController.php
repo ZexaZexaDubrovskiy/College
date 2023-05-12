@@ -12,6 +12,11 @@ class ShowController extends Controller
     {
         $currentGroup = Group::findOrFail($id);
         $timetables = TimeTable::all();
+
+        //delete
+        $timetables = TimeTable::orderBy('date_time_table_id', 'asc')->orderBy('lesson_id', 'asc')->get();
+
+
         return view('timetable.show', compact('currentGroup'), compact('timetables', 'id'));
     }
 }

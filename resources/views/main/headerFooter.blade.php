@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 
+    <!--tinymce -->
+    <script src="https://cdn.tiny.cloud/1/3635bxia89j4o82six6chjqypbalhn343w185ejubumym60s/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
     <!-- delete aut -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Required meta tags -->
@@ -15,6 +18,7 @@
     <link href="//fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
           rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+{{--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">--}}
 
     <!-- Template CSS какая то чушь, но она работает. Я вообще бекэнд разработчик что вы хотели? Интересно кто будет читать это?))) -->
     @vite(['resources/sass/app.scss',
@@ -82,10 +86,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light py-md-2 py-0 px-0">
                     <a class="navbar-brand" href="{{ route('main.index') }}"><img src="{{ asset('//images logo-icon.png')}}"
                                                                                   alt=""/>РПК</a>
-                    <!-- if logo is image enable this
-                <a class="navbar-brand" href="#index.html">
-                        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-                </a> -->
+
                     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -93,7 +94,9 @@
                         <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
                         <span class="navbar-toggler-icon fa icon-close fa-times"></span>
                     </button>
-
+{{--                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">--}}
+{{--                        <span class="navbar-toggler-icon"></span>--}}
+{{--                    </button>--}}
 
                     <!-- gjvtyzk-->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
