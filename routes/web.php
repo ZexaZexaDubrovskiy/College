@@ -15,6 +15,9 @@ Route::group(['namespace' => 'App\\Http\\Controllers\\Main'], function () {
 Route::group(['namespace' => 'App\\Http\\Controllers\\ProfessionalTrainingCourse'], function () {
     Route::get('/professionaltrainingcourses', 'IndexController')->name('professionaltrainingcourses.index');
 });
+Route::group(['namespace' => 'App\\Http\\Controllers\\ProfessionalTrainingCourse', 'middleware' => 'admin'], function () {
+    Route::patch('/professionaltrainingcourses/{id}', 'UpdateController')->name('professionaltrainingcourses.update');
+});
 //общежитие
 Route::group(['namespace' => 'App\\Http\\Controllers\\Hostel'], function () {
     Route::get('/hostel', 'IndexController')->name('hostel.index');
@@ -26,8 +29,9 @@ Route::group(['namespace' => 'App\\Http\\Controllers\\Hostel', 'middleware' => '
 Route::group(['namespace' => 'App\\Http\\Controllers\\Requisite'], function () {
     Route::get('/requisite', 'IndexController')->name('requisite.index');
 });
-
-
+Route::group(['namespace' => 'App\\Http\\Controllers\\Requisite', 'middleware' => 'admin'], function () {
+    Route::patch('/requisite/{id}', 'UpdateController')->name('requisite.update');
+});
 
 
 ////специальности

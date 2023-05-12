@@ -24,10 +24,12 @@ return new class extends Migration
             $table->string('education');
             $table->string('experience');
             $table->string('description');
-            $table->binary('avatar')->nullable();
+            //$table->binary('avatar')->nullable();
 
             $table->timestamps();
         });
+
+        DB::statement("ALTER TABLE contacts ADD avatar LONGBLOB AFTER description");
     }
 
     /**

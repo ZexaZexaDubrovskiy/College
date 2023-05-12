@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+
+
     /**
      * Run the migrations.
      *
@@ -15,16 +17,11 @@ return new class extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
-            $table->binary('url');
+
             $table->timestamps();
         });
-        //создать самому таблицу
-        /*
-         *
-         * роли переим
-         * и доделать таблицу
-         * расписаине
-         */
+
+        DB::statement("ALTER TABLE photos ADD url LONGBLOB AFTER id");
     }
 
     /**

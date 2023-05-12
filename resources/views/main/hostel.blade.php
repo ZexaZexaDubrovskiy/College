@@ -25,7 +25,7 @@
                 </div>
                 <div>
                     <p class="mt-3 mb-5 class">
-                    @if(auth()->user() != null && (auth()->user()->role == 'admin' || auth()->user()->role == 'accountant'))
+                    @if(auth()->user() != null && (auth()->user()->role == 'admin' || auth()->user()->role == 'helper'))
                         <form action="{{ route('hostel.update', 1) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('patch')
@@ -36,10 +36,10 @@
                                     $htmlText = \Illuminate\Support\Facades\DB::table('html_table')->where('namePage', '=', 'hostel')->first();
                                     echo $htmlText->htmlData;
                                 @endphp
-                                @if(auth()->user() != null && (auth()->user()->role == 'admin' || auth()->user()->role == 'accountant'))
+                                @if(auth()->user() != null && (auth()->user()->role == 'admin' || auth()->user()->role == 'helper'))
                             </textarea>
 
-                            <div class="col-auto">
+                            <div class='col-auto mt-3'>
                                 <button type="submit" class="btn btn-primary mb-3">Обновить</button>
                             </div>
                         </form>

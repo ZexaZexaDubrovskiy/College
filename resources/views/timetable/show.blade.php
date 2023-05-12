@@ -36,7 +36,7 @@
                                 <th scope="col" style="width: 25%;">Преподаватель</th>
                                 <th scope="col" style="width: 25%;">Каб.</th>
                                 <th scope="col" style="width: 25%; ">Примечание</th>
-                                @if(auth()->user() != null && (auth()->user()->role == 'admin' || auth()->user()->role == 'accountant'))
+                                @if(auth()->user() != null && (auth()->user()->role == 'admin' || auth()->user()->role == 'helper'))
                                     <th scope="col" style="width: 25%; ">изменить</th>
                                 @endif
                             </tr>
@@ -89,7 +89,7 @@
                                         <td> {{\App\Models\Room::where('id', '=', $timetable->room_id)->first()['name']}} </td>
                                         <td> {{$timetable->description}} </td>
 
-                                        @if(auth()->user() != null && (auth()->user()->role == 'admin' || auth()->user()->role == 'accountant'))
+                                        @if(auth()->user() != null && (auth()->user()->role == 'admin' || auth()->user()->role == 'helper'))
 {{--                                        @can('view', auth()->user())--}}
                                             <td><a style="color: #09458d"
                                                    href="{{route('timetable.edit', [$timetable->id, $currentGroup['id']]) }}">изменить</a>
