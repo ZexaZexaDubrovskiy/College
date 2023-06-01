@@ -37,8 +37,6 @@ class StoreRequest extends FormRequest
             'experience' => 'required|string',
             'description' => 'required|string',
             'avatar' => "required | mimes:jpeg,jpg,png | max:1000",
-
-
         ];
     }
 }

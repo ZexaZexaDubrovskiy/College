@@ -30,8 +30,85 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $spec = Specialization::factory(20)->create();
-        $cont = Contact::factory(20)->create();
+        $spec = Specialization::factory(10)->create();
+        //contacts
+        Contact::factory(1)->create([
+            'FIO' => 'Зернова Марина Александровна',
+            'post' => 'директор',
+            'phone' => '8(4855) 26-49-15',
+            'email' => 'rpcollege.rybinsk@yarregion.ru',
+            'workTime' => '9:00-18:00',
+            'education' => 'Высшее',
+            'experience' => '19',
+            'description' => '«Государственная академия промышленного менеджмента им.
+            Н.П. Пастухова» обучение по доп.проф. программе «Основы государственного
+            и муниципального управления», 72 час., 2018 г.;',
+            'avatar' => file_get_contents('myimages/q1.jpg'),
+        ]);
+        Contact::factory(1)->create([
+            'FIO' => 'Виноградов Роман Александрович',
+            'post' => 'заместитель директора по учебно-производственной работе',
+            'phone' => '26-77-37',
+            'email' => '-',
+            'workTime' => '9:00-18:00',
+            'education' => 'Высшее',
+            'experience' => '19',
+            'description' => '«ГОУ ЯО СПО Ярославский педагогический колледж, 2006 г.,
+            специальность - профессиональное обучение (по отраслям),
+            квалификация-мастер производственного обучения, техник;',
+            'avatar' => file_get_contents('myimages/q2.jpg'),
+        ]);
+        Contact::factory(1)->create([
+            'FIO' => 'Иванова Эльвира Юрьевна',
+            'post' => 'главный бухгалтер',
+            'phone' => '26-77-37',
+            'email' => '-',
+            'workTime' => '9:00-18:00',
+            'education' => 'Рыбинское речное училище, 2002 г., экономика, бухгалтерский учет и контроль – бухгалтер',
+            'experience' => '19',
+            'description' => '-',
+            'avatar' => file_get_contents('myimages/q3.jpg'),
+        ]);
+        Contact::factory(1)->create([
+            'FIO' => 'Окунев Николай Анатольевич',
+            'post' => 'начальник хозяйственного отдела',
+            'phone' => '(4855)26-52-29',
+            'email' => 'ok-rybinsk@mail.ru',
+            'workTime' => '9:00-18:00',
+            'education' => '-',
+            'experience' => '7',
+            'description' => 'награжден Почетной Грамотой департамента образования Ярославской области, приказ № 02-14/10 от 16.03.2023 г.',
+            'avatar' => file_get_contents('myimages/q4.jpg'),
+        ]);
+        Contact::factory(1)->create([
+            'FIO' => 'Осокина Ирина Николаевна',
+            'post' => 'заместитель директора по учебной работе,заслуженный учитель РФ',
+            'phone' => '(4855) 26-35-48',
+            'email' => 'osokina@rpcollege.ru, osokinain_rpcollege@mail.ru (для студентов)',
+            'workTime' => '9:00-18:00',
+            'education' => 'Горьковский государственный университет им. Н.И. Лобачевского, 1987 г.
+            специальность – история, квалификация – историк, преподаватель истории и обществоведения',
+            'experience' => '38',
+            'description' => 'Заслуженный учитель РФ, имеет Благодарности Федерального агентства по печати и
+            массовым коммуникациям награждена Почетной грамотой ДО ЯО 2020 г.',
+            'avatar' => file_get_contents('myimages/q5.jpg'),
+        ]);
+        Contact::factory(1)->create([
+            'FIO' => 'Чепцова Наталия Анатольевна',
+            'post' => 'заместитель директора по учебно-воспитательной работе, кандидат психологических наук',
+            'phone' => '(4855) 26-35-29',
+            'email' => 'secretary@rpcollege.ru',
+            'workTime' => '9:00-18:00',
+            'education' => 'Ярославский государственный педагогический университет им. К.Д.Ушинского, 1990 г.
+            специальность – педагогика и психология дошкольная, квалификация – преподаватель дошкольной
+            педагогики и психологии, воспитатель',
+            'experience' => '32',
+            'description' => 'кандидат психологических наук',
+            'avatar' => file_get_contents('myimages/q6.jpg'),
+        ]);
+
+
+
 
         DateTimeTable::factory(1)->create([
             'startDate' => '2023.05.12'
@@ -67,20 +144,31 @@ class DatabaseSeeder extends Seeder
             'startTime' => '19:15:00'
         ]);
 
-
-
-
-       $photos = Photo::factory(20)->create();
+       $photos = Photo::factory(100)->create();
        $posts = Post::factory(20)->create();
-       $postPhotos = PostPhoto::factory(50)->create();
 
-       $groups = Group::factory(5)->create();
+       $j = 1;
+       for($i = 1; $i <= 20; $i++){
+           $buf = random_int(1, 3);
+           while($buf != 0) {
+               PostPhoto::factory(1)->create([
+                   'post_id' => $i,
+                   'photo_id' => $j,
+               ]);
+               $buf--;
+               $j++;
+           }
+       }
+
+       //$postPhotos = PostPhoto::factory(50)->create();
+
+        $groups = Group::factory(5)->create();
         $rooms = Room::factory(50)->create();
         $subjects = Subject::factory(100)->create();
         $teachers = Teacher::factory(10)->create();
 
+        //user
         $users = User::factory(3)->create();
-
         User::factory(1)->create([
             'name' => 'admin',
             'email' => 'admin@admin',
@@ -225,7 +313,6 @@ class DatabaseSeeder extends Seeder
                                                     тел. 84855263592</p>
                                             </div>",
         ]);
-
         HtmlTable::factory(1)->create([
             'namePage' => 'requisite',
             'htmlData' => "<table class=\"table\">
@@ -307,7 +394,6 @@ class DatabaseSeeder extends Seeder
                         </tbody>
                     </table>",
         ]);
-
         HtmlTable::factory(1)->create([
             'namePage' => 'professionaltrainingcourses',
             'htmlData' => "<div>

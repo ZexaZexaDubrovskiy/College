@@ -93,7 +93,7 @@
 
 
                         <div class="col-auto">
-                            <button type="submit" class="btn btn-primary mb-3">Create</button>
+                            <button type="submit" class="btn btn-primary mb-3">Создать</button>
                         </div>
                     </form>
                 </div>

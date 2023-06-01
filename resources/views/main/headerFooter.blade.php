@@ -3,7 +3,7 @@
 <head>
 
     <!--tinymce -->
-    <script src="https://cdn.tiny.cloud/1/3635bxia89j4o82six6chjqypbalhn343w185ejubumym60s/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/zb55z8e407pppp8jnzd9w1xvttddykiblu3dy5biiwjv75do/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
     <!-- delete aut -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
